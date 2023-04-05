@@ -16,7 +16,7 @@ body {
     background-color: #f1f1f1;
     background-image: url(./img/gaaaavioes.webp);
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
 }
 
 header {
@@ -48,8 +48,11 @@ main {
         "principal secundaria";
     gap: 10px;
     grid-template-columns: 7fr 6fr;
-}
 
+}
+.imglateral *:hover{
+    transform: scale(1.1);
+}
 .img__principal {
     grid-area: principal;
     background-image: url(./img/back.jpg);
@@ -111,13 +114,19 @@ img[alt~="botao"] {
         "img3 img4";
     column-gap: 10px;
     row-gap: 10px;
-}
 
+}
+.img__principal:hover{
+    transform: scale(1.1);
+}
 .img1 {
     background-image: url(./img/bandeira.jfif);
     background-size: cover;
     grid-area: img1;
 
+}
+.img1:hover{
+    transform: scale(1.1);
 }
 
 .img2 {
@@ -126,17 +135,25 @@ img[alt~="botao"] {
     grid-area: img2;
 
 }
+.img2:hover{
+    transform: scale(1.1);
+}
 
 .img3 {
     background-image: url(./img/feminino.jpg);
     background-size: cover;
     grid-area: img3;
 }
-
+.img3:hover{
+    transform: scale(1.1);
+}
 .img4 {
     background-image: url(./img/gavioes.jpg);
     background-size: cover;
     grid-area: img4;
+}
+.img4:hover{
+    transform: scale(1.1);
 }
 
 .faixa__secundaria {
@@ -149,19 +166,25 @@ img[alt~="botao"] {
     background-image: url(./img/neo.jpg);
     background-size: cover;
 }
+.img5:hover{
+    transform: scale(1.1);
+}
 
 .img6 {
     background-image: url(./img/socrates.jpg);
     background-size: cover;
-    
-
+}
+.img6:hover{
+    transform: scale(1.1);
 }
 
 .img7 {
     background-image: url(./img/taças.jpg);
     background-size: cover;
 }
-
+.img6:hover{
+    transform: scale(1.1);
+}
 footer {
     display: flex;
     justify-content: center;
