@@ -1,191 +1,130 @@
-
-* {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
-    box-sizing: border-box;
-    border-radius: 5px;
+    box-sizing:border-box;
 }
-
-body {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 125px 1fr 125px;
-    margin: 0px 325px 0px 325px;
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Lora', serif;
-    background-color: #f1f1f1;
-    background-image: url(./img/gaaaavioes.webp);
-    background-size: cover;
-    background-repeat: no-repeat; 
+a{
+    text-decoration: none;
 }
-
-header {
-    display: grid;
+ul,ol,li {
+    list-style: none;
 }
 
 h1 {
+    color: white;
+    font-size:large;
+    position: center;
+}
+body{
+    background-color:rgb(78, 74, 74);
+    height: 100vh;
+    width: 100vw;
     display: grid;
-    place-items: center;
-    place-content: center;
-    color: black;
-    font-size: 1.7em;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 96px;
+    padding-right: 96px;
 }
 
-p+p {
-    color: red;
-}
-
-main {
-    display: grid;
-    grid-template-rows: 4fr 2fr;
-    row-gap: 10px;
-}
-
-.faixa__principal {
-    display: grid;
-    grid-template-areas:
-        "principal secundaria"
-        "principal secundaria";
-    gap: 10px;
-    grid-template-columns: 7fr 6fr;
-
-}
-.imglateral *:hover{
-    transform: scale(1.1);
-}
-.img__principal {
-    grid-area: principal;
-    background-image: url(./img/back.jpg);
-    background-size: cover;
-    display: grid;
-    place-items: end start;
-}
-
-.faixa__informacoes {
-    height: 2.3em;
+.galeria{
+    height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 8fr 1fr;
-    opacity: 0;
-    transition-duration: .3s;
+    grid-template-areas: 
+    "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+    "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+    "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+    gap: 12px;
 }
-
-.faixa__informacoes:hover {
-    opacity: 1;
+.foto{
+    position: relative;
+    background-color: rgb(7, 5, 5);
+    overflow: hidden;
 }
-
-.informacoes {
-    background-color: rgb(16, 35, 51, 0.8);
-    display: grid;
-    justify-content: center;
-    align-items: center;
+.foto:nth-child(1){
+ grid-area: f1;
+ background-image: url(./img/eterna.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: bottom;
 }
-
-.informacoes p {
-    color: white;
-    opacity: 1;
-    font-size: 0.9em;
-    opacity: 1;
+.foto:nth-child(2){
+grid-area: f2;
+background-image: url(./img/corinthians\ masculino.webp);
+background-repeat: no-repeat;
+ background-size: cover;
+ background-position: top;
 }
-
-.comprar {
-    background-color: maroon;
-    display: grid;
-    place-items: center;
-    align-items: center;
-}
-
-.comprar a {
-    display: grid;
-    place-items: center;
-    align-items: center;
-}
-
-img[alt~="botao"] {
-    height: 2em;
-    width: 2em;
-}
-
-.img__secundaria {
-    grid-area: secundaria;
-    display: grid;
-    grid-template-areas:
-        "img1 img2"
-        "img3 img4";
-    column-gap: 10px;
-    row-gap: 10px;
-
-}
-.img__principal:hover{
-    transform: scale(1.1);
-}
-.img1 {
-    background-image: url(./img/bandeira.jfif);
-    background-size: cover;
-    grid-area: img1;
-
-}
-.img1:hover{
-    transform: scale(1.1);
-}
-
-.img2 {
-    background-image: url(./img/corinthians\ masculino.webp);
-    background-size: cover;
-    grid-area: img2;
-
-}
-.img2:hover{
-    transform: scale(1.1);
-}
-
-.img3 {
+.foto:nth-child(3){
+    grid-area: f3;
     background-image: url(./img/feminino.jpg);
-    background-size: cover;
-    grid-area: img3;
+    background-repeat: no-repeat;
+ background-size: cover;
+ background-position: top;
+    }
+    .foto:nth-child(4){
+        grid-area: f4;
+        background-image: url(./img/gaaaavioes.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        }
+        .foto:nth-child(5){
+            grid-area: f5;
+            background-image: url(./img/neo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            }
+            .foto:nth-child(6){
+                grid-area: f6;
+                background-image: url(./img/socrates.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                }
+                .foto:nth-child(7){
+                    grid-area: f7;
+                    background-image: url(./img/taças.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    }
+                    .foto:nth-child(8){
+                        grid-area: f8;
+                        background-image: url(./img/E1cnuz4WUA8RfN1.webp);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        }
+.foto:hover > .foto__info{
+    transform: translateY(0);
 }
-.img3:hover{
-    transform: scale(1.1);
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: #0009;
+    color: white;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: 1s;
 }
-.img4 {
-    background-image: url(./img/gavioes.jpg);
-    background-size: cover;
-    grid-area: img4;
+@media (max-width:768px){
+    body{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: column;
+    }
+    .foto{
+        width: 100%;
+        height: 33vh;
+    }
+    
 }
-.img4:hover{
-    transform: scale(1.1);
-}
-
-.faixa__secundaria {
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: 2fr 2fr 3fr;
-}
-
-.img5 {
-    background-image: url(./img/neo.jpg);
-    background-size: cover;
-}
-.img5:hover{
-    transform: scale(1.1);
-}
-
-.img6 {
-    background-image: url(./img/socrates.jpg);
-    background-size: cover;
-}
-.img6:hover{
-    transform: scale(1.1);
-}
-
-.img7 {
-    background-image: url(./img/taças.jpg);
-    background-size: cover;
-}
-.img6:hover{
-    transform: scale(1.1);
-}
-footer {
+header, footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,5 +152,7 @@ footer {
     text-decoration: none;
     color: white;
 }
-
-@keyframes
+header{
+    color: black;
+    font-size: 1.7em;
+}
